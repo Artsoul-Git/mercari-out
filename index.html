@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>古着4,000点・メルカリ急減からの脱出地図 — はじめてでもなぞれる実行レポート v1.0</title>
+<title>古着4,000点・メルカリ急減からの脱出地図 — はじめてでもなぞれる実行レポート v1.1</title>
 <meta name="description" content="メルカリで古着が急に売れなくなった本当の理由と、4,000点の在庫を3〜12ヶ月でさばき切るための10案ロードマップ。なぞれば実践できる工程表つき。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1021,7 +1021,7 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
 <!-- ========== TOP BAR ========== -->
 <div class="topbar">
   <div class="container">
-    <span><strong>古着販売リカバリーレポート v1.0</strong>　|　2026-06-03 作成</span>
+    <span><strong>古着販売リカバリーレポート v1.1</strong>　|　2026-06-03 作成</span>
     <span class="badge-line">forest_green / AS_AI導入支援事業</span>
   </div>
 </div>
@@ -1088,7 +1088,96 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
       <p>2025年8月29日にアメリカが小口輸入の関税免除（800ドル以下の無税ルール）をやめました。これに連動して、日本郵便がアメリカ向け荷物の引受を一時停止し、海外の代行業者（Buyee／tenso／ZenMarketなど）からの注文が一気に止まったのです。さらに2026年4月から代行業者の手数料も値上げされ、海外のお客さんは「日本のメルカリで買う理由」を失いつつあります。</p>
     </div>
 
-    <h3>① 何が起きていたか — 時系列で見るタイムライン</h3>
+    <h3>① ひと目でわかる「何が起きたか」の全体像</h3>
+    <p>まず文字を読む前に、図でざっと把握してください。「通常時の経路」が「3つのショック」でどこを切られたかが一目でわかります。</p>
+
+    <div class="flow-svg-wrap">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3つのショックで海外動線が壊れた構造図">
+        <defs>
+          <marker id="arrA-ok" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#228B48"/>
+          </marker>
+          <marker id="arrA-ng" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+          </marker>
+        </defs>
+
+        <!-- 通常時 -->
+        <text x="20" y="32" fill="#1A6D39" font-size="14" font-weight="700" letter-spacing="2">▼ 2025年8月以前：通常の購入経路（順調）</text>
+        <rect x="30" y="50" width="180" height="60" rx="6" fill="#E8F5EC" stroke="#228B48" stroke-width="2"/>
+        <text x="120" y="78" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="600">あなたのメルカリ出品</text>
+        <text x="120" y="98" text-anchor="middle" fill="#555" font-size="11">4,000点の古着在庫</text>
+
+        <rect x="320" y="50" width="200" height="60" rx="6" fill="#E8F5EC" stroke="#228B48" stroke-width="2"/>
+        <text x="420" y="78" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="600">Buyee／代行業者</text>
+        <text x="420" y="98" text-anchor="middle" fill="#555" font-size="11">日本国内住所で受け取り→海外発送</text>
+
+        <rect x="640" y="50" width="200" height="60" rx="6" fill="#E8F5EC" stroke="#228B48" stroke-width="2"/>
+        <text x="740" y="78" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="600">米国の海外顧客</text>
+        <text x="740" y="98" text-anchor="middle" fill="#555" font-size="11">無税で安く受け取れる</text>
+
+        <line x1="215" y1="80" x2="315" y2="80" stroke="#228B48" stroke-width="3" marker-end="url(#arrA-ok)"/>
+        <line x1="525" y1="80" x2="635" y2="80" stroke="#228B48" stroke-width="3" marker-end="url(#arrA-ok)"/>
+
+        <!-- 区切り -->
+        <line x1="20" y1="140" x2="860" y2="140" stroke="#c0392b" stroke-width="1" stroke-dasharray="6 4"/>
+        <text x="440" y="158" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="700">▼ 2025年8月29日以降：3つのショックが連鎖して経路が分断</text>
+
+        <!-- ショック後 -->
+        <rect x="30" y="180" width="180" height="60" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+        <text x="120" y="208" text-anchor="middle" fill="#666" font-size="14" font-weight="600">あなたのメルカリ出品</text>
+        <text x="120" y="228" text-anchor="middle" fill="#999" font-size="11">在庫はそのまま（変化なし）</text>
+
+        <rect x="320" y="180" width="200" height="60" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="2"/>
+        <text x="420" y="208" text-anchor="middle" fill="#c0392b" font-size="14" font-weight="600">Buyee／代行業者</text>
+        <text x="420" y="228" text-anchor="middle" fill="#c0392b" font-size="11">手数料値上げ＆送れない</text>
+
+        <rect x="640" y="180" width="200" height="60" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="2"/>
+        <text x="740" y="208" text-anchor="middle" fill="#c0392b" font-size="14" font-weight="600">米国の海外顧客</text>
+        <text x="740" y="228" text-anchor="middle" fill="#c0392b" font-size="11">関税15-50%が乗る</text>
+
+        <line x1="215" y1="210" x2="315" y2="210" stroke="#c0392b" stroke-width="3" marker-end="url(#arrA-ng)" stroke-dasharray="8 4"/>
+        <line x1="525" y1="210" x2="635" y2="210" stroke="#c0392b" stroke-width="3" marker-end="url(#arrA-ng)" stroke-dasharray="8 4"/>
+
+        <!-- ×印 -->
+        <g transform="translate(265,210)">
+          <circle r="14" fill="#c0392b"/>
+          <text x="0" y="5" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">×</text>
+        </g>
+        <g transform="translate(575,210)">
+          <circle r="14" fill="#c0392b"/>
+          <text x="0" y="5" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">×</text>
+        </g>
+
+        <!-- 3つのショックの説明 -->
+        <rect x="30" y="280" width="260" height="120" rx="6" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="45" y="305" fill="#c0392b" font-size="12" font-weight="700" letter-spacing="1">SHOCK 1 / 2025-08-29</text>
+        <text x="45" y="328" fill="#1a1a1a" font-size="13" font-weight="600">アメリカが関税免除を廃止</text>
+        <text x="45" y="352" fill="#555" font-size="11">800ドル以下も無税ではなく</text>
+        <text x="45" y="368" fill="#555" font-size="11">なり、日本品に15-50%の関税</text>
+        <text x="45" y="389" fill="#c0392b" font-size="11" font-weight="600">→ 顧客側で「割高」になる</text>
+
+        <rect x="310" y="280" width="260" height="120" rx="6" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="325" y="305" fill="#c0392b" font-size="12" font-weight="700" letter-spacing="1">SHOCK 2 / 2025-08-27</text>
+        <text x="325" y="328" fill="#1a1a1a" font-size="13" font-weight="600">Japan Post 米国向け停止</text>
+        <text x="325" y="352" fill="#555" font-size="11">100ドル超の販売品が送れず、</text>
+        <text x="325" y="368" fill="#555" font-size="11">代行業者の主要発送が停止</text>
+        <text x="325" y="389" fill="#c0392b" font-size="11" font-weight="600">→ 物理的に届けられない</text>
+
+        <rect x="590" y="280" width="260" height="120" rx="6" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="605" y="305" fill="#c0392b" font-size="12" font-weight="700" letter-spacing="1">SHOCK 3 / 2026-04-01</text>
+        <text x="605" y="328" fill="#1a1a1a" font-size="13" font-weight="600">Buyee手数料が67%値上げ</text>
+        <text x="605" y="352" fill="#555" font-size="11">1件¥300→¥500に。安価な</text>
+        <text x="605" y="368" fill="#555" font-size="11">古着ほど採算が崩れる</text>
+        <text x="605" y="389" fill="#c0392b" font-size="11" font-weight="600">→ 代行経由でも割高化</text>
+      </svg>
+      <div class="legend">
+        <span><i style="background:#228B48"></i>正常な経路（〜2025年8月）</span>
+        <span><i style="background:#c0392b"></i>ショックで分断された経路（2025年8月29日〜）</span>
+      </div>
+    </div>
+
+    <h3>② 何が起きていたか — 時系列で見るタイムライン</h3>
     <p>同じ8ヶ月のあいだに、海外からの購入ルートを断つ出来事が連鎖していました。</p>
 
     <div class="timeline">
@@ -1119,7 +1208,7 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
       </div>
     </div>
 
-    <h3>② 急減の原因Top3（クライアントの状況に当てはまる順）</h3>
+    <h3>③ 急減の原因Top3（クライアントの状況に当てはまる順）</h3>
 
     <div class="cause-grid">
       <div class="cause-card rank-1">
@@ -1154,7 +1243,7 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
       </div>
     </div>
 
-    <h3>③ 自分の状況を見るチェックリスト（5分でできる）</h3>
+    <h3>④ 自分の状況を見るチェックリスト（5分でできる）</h3>
     <p>下のチェックをつけてみて、当てはまる数で原因の特定がぐっと進みます。</p>
 
     <div class="checkbox-list">
@@ -1187,7 +1276,71 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
       ヤフー・楽天が使えなくても、別ルートで「海外直販」「海外間接（代行業者経由を維持）」「自社EC」「卸売り」の組み合わせが十分組めます。
     </p>
 
-    <h3>① 4つの方向（戦略マップ）</h3>
+    <h3>① 在庫4,000点をどう分散するか — 販路マップ</h3>
+    <p>1ヶ所だけで売り切ろうとせず、目的別に4方向に振り分けます。下図の中央が4,000点の在庫、外側が「どこへ流すか」の4方向です。</p>
+
+    <div class="flow-svg-wrap">
+      <svg viewBox="0 0 960 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="販路マップ 4方向×8販路">
+        <defs>
+          <marker id="arrE" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#228B48"/>
+          </marker>
+        </defs>
+
+        <!-- 中央：在庫 -->
+        <circle cx="480" cy="230" r="78" fill="#0F4A28"/>
+        <text x="480" y="222" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">あなたの在庫</text>
+        <text x="480" y="244" text-anchor="middle" fill="#B8E5C5" font-size="22" font-weight="700">4,000点</text>
+        <text x="480" y="266" text-anchor="middle" fill="#fff" font-size="11">古着・中古衣類</text>
+
+        <!-- 上：A国内テコ入れ -->
+        <rect x="320" y="20" width="320" height="80" rx="8" fill="#fff" stroke="#34A85A" stroke-width="2"/>
+        <circle cx="350" cy="44" r="14" fill="#E8F5EC" stroke="#34A85A" stroke-width="2"/>
+        <text x="350" y="49" text-anchor="middle" fill="#1A6D39" font-size="14" font-weight="700">A</text>
+        <text x="375" y="48" fill="#0F4A28" font-size="14" font-weight="700">国内をテコ入れ</text>
+        <text x="375" y="68" fill="#555" font-size="11">既存顧客の閲覧回復・店舗化</text>
+        <text x="375" y="86" fill="#228B48" font-size="11" font-weight="600">メルカリ強化／Shops昇格／BASE自社EC</text>
+        <line x1="480" y1="152" x2="480" y2="105" stroke="#34A85A" stroke-width="2.5" marker-end="url(#arrE)"/>
+
+        <!-- 右：B海外直接 -->
+        <rect x="700" y="190" width="240" height="80" rx="8" fill="#fff" stroke="#228B48" stroke-width="2"/>
+        <circle cx="730" cy="214" r="14" fill="#E8F5EC" stroke="#228B48" stroke-width="2"/>
+        <text x="730" y="219" text-anchor="middle" fill="#1A6D39" font-size="14" font-weight="700">B</text>
+        <text x="755" y="218" fill="#0F4A28" font-size="14" font-weight="700">海外を直接つかむ</text>
+        <text x="755" y="238" fill="#555" font-size="11">最大の伸びしろ・単価2-3倍</text>
+        <text x="710" y="258" fill="#228B48" font-size="11" font-weight="600">eBay／Grailed／Depop／Shopee</text>
+        <line x1="563" y1="230" x2="695" y2="230" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrE)"/>
+
+        <!-- 下：C海外間接 -->
+        <rect x="320" y="360" width="320" height="80" rx="8" fill="#fff" stroke="#1A6D39" stroke-width="2"/>
+        <circle cx="350" cy="384" r="14" fill="#E8F5EC" stroke="#1A6D39" stroke-width="2"/>
+        <text x="350" y="389" text-anchor="middle" fill="#1A6D39" font-size="14" font-weight="700">C</text>
+        <text x="375" y="388" fill="#0F4A28" font-size="14" font-weight="700">海外を間接で残す</text>
+        <text x="375" y="408" fill="#555" font-size="11">最小の手間で海外露出を維持</text>
+        <text x="375" y="428" fill="#228B48" font-size="11" font-weight="600">Buyee Connect／Mercari Global App</text>
+        <line x1="480" y1="308" x2="480" y2="355" stroke="#1A6D39" stroke-width="2.5" marker-end="url(#arrE)"/>
+
+        <!-- 左：D一括処分 -->
+        <rect x="20" y="190" width="240" height="80" rx="8" fill="#fff" stroke="#0F4A28" stroke-width="2"/>
+        <circle cx="50" cy="214" r="14" fill="#E8F5EC" stroke="#0F4A28" stroke-width="2"/>
+        <text x="50" y="219" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">D</text>
+        <text x="75" y="218" fill="#0F4A28" font-size="14" font-weight="700">滞留分を一括処分</text>
+        <text x="75" y="238" fill="#555" font-size="11">即金30〜80万円を確保</text>
+        <text x="30" y="258" fill="#228B48" font-size="11" font-weight="600">古着問屋／キロ売り／コンテナ輸出</text>
+        <line x1="397" y1="230" x2="265" y2="230" stroke="#0F4A28" stroke-width="2.5" marker-end="url(#arrE)"/>
+
+        <!-- 振り分け例 -->
+        <text x="480" y="335" text-anchor="middle" fill="#666" font-size="11" font-style="italic">例：人気上位800点はA/B、低単価品はC、滞留3,200点はD</text>
+      </svg>
+      <div class="legend">
+        <span><i style="background:#34A85A"></i>A. 国内テコ入れ</span>
+        <span><i style="background:#228B48"></i>B. 海外直接</span>
+        <span><i style="background:#1A6D39"></i>C. 海外間接</span>
+        <span><i style="background:#0F4A28"></i>D. 一括処分</span>
+      </div>
+    </div>
+
+    <h3>② 4つの方向（戦略マップ）</h3>
     <div class="option-map">
       <div class="option-cat">
         <div class="icon">A</div>
@@ -1215,7 +1368,7 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
       </div>
     </div>
 
-    <h3>② 主要販路の比較表（手数料・難しさ・適性）</h3>
+    <h3>③ 主要販路の比較表（手数料・難しさ・適性）</h3>
     <p>古着4,000点をさばく前提で、現実的に手の届く販路だけを比較しました。手数料は2026年6月時点の公開情報ベースです（出典は最下部）。</p>
 
     <div class="table-wrap">
@@ -1471,6 +1624,170 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
       各カードに <strong>① 効果の大きさ ② 着手のしやすさ ③ かかるお金 ④ 元が取れる目安 ⑤ 最初の3ステップ</strong> を載せています。
     </p>
 
+    <h3>仕組みがピンとこない初心者向け — 3つのフロー図</h3>
+    <p>打ち手の中でも「Buyee Connect」「eIS（eBay国際配送）」「キロ売り」は、言葉だけだとイメージしづらい3大ハードル。それぞれ図で見ると拍子抜けするほどシンプルです。</p>
+
+    <!-- ▼ Buyee Connect フロー -->
+    <h4 style="font-size:15px;font-weight:700;color:#1A6D39;margin:24px 0 8px;border-left:3px solid #228B48;padding-left:10px;">図① Buyee Connect の流れ — 自分の作業はほぼゼロ</h4>
+    <div class="flow-svg-wrap">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buyee Connect の流れ">
+        <defs>
+          <marker id="arrC" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#228B48"/>
+          </marker>
+        </defs>
+
+        <!-- 上段：あなたの出品 → Buyee → 海外バイヤー -->
+        <rect x="20" y="30" width="200" height="70" rx="6" fill="#E8F5EC" stroke="#228B48" stroke-width="2"/>
+        <text x="120" y="58" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">あなたのメルカリ出品</text>
+        <text x="120" y="78" text-anchor="middle" fill="#555" font-size="11">既存在庫そのまま</text>
+        <text x="120" y="94" text-anchor="middle" fill="#228B48" font-size="11" font-weight="600">追加作業：英語タイトル付与のみ</text>
+
+        <rect x="340" y="30" width="200" height="70" rx="6" fill="#fff" stroke="#228B48" stroke-width="2"/>
+        <text x="440" y="58" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">Buyee（中継）</text>
+        <text x="440" y="78" text-anchor="middle" fill="#555" font-size="11">あなたの出品を海外公開</text>
+        <text x="440" y="94" text-anchor="middle" fill="#228B48" font-size="11" font-weight="600">審査なし／ヤフー審査落ちでもOK</text>
+
+        <rect x="660" y="30" width="200" height="70" rx="6" fill="#fff" stroke="#228B48" stroke-width="2"/>
+        <text x="760" y="58" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">海外バイヤー</text>
+        <text x="760" y="78" text-anchor="middle" fill="#555" font-size="11">英語UIで購入・決済</text>
+        <text x="760" y="94" text-anchor="middle" fill="#228B48" font-size="11" font-weight="600">支払い：自国通貨でOK</text>
+
+        <line x1="225" y1="65" x2="335" y2="65" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrC)"/>
+        <line x1="545" y1="65" x2="655" y2="65" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrC)"/>
+
+        <!-- 中段：注文が入った後 -->
+        <text x="20" y="140" fill="#1A6D39" font-size="13" font-weight="700" letter-spacing="1">▼ 注文が入ったら（Buyeeが裏で全部処理）</text>
+
+        <rect x="20" y="160" width="200" height="80" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+        <text x="120" y="188" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">あなた</text>
+        <text x="120" y="210" text-anchor="middle" fill="#555" font-size="11">Buyeeの日本国内住所宛てに</text>
+        <text x="120" y="226" text-anchor="middle" fill="#555" font-size="11">いつも通り発送するだけ</text>
+
+        <rect x="340" y="160" width="200" height="80" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+        <text x="440" y="188" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">Buyee倉庫</text>
+        <text x="440" y="210" text-anchor="middle" fill="#555" font-size="11">受取・検品・梱包・関税書類</text>
+        <text x="440" y="226" text-anchor="middle" fill="#555" font-size="11">海外発送をBuyeeが代行</text>
+
+        <rect x="660" y="160" width="200" height="80" rx="6" fill="#fff" stroke="#999" stroke-width="2"/>
+        <text x="760" y="188" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">海外バイヤー</text>
+        <text x="760" y="210" text-anchor="middle" fill="#555" font-size="11">自国の住所で受取</text>
+        <text x="760" y="226" text-anchor="middle" fill="#555" font-size="11">追跡番号・サポート完備</text>
+
+        <line x1="225" y1="200" x2="335" y2="200" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrC)"/>
+        <line x1="545" y1="200" x2="655" y2="200" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrC)"/>
+
+        <!-- 最重要メッセージ -->
+        <rect x="20" y="265" width="840" height="40" rx="6" fill="#0F4A28"/>
+        <text x="440" y="291" text-anchor="middle" fill="#B8E5C5" font-size="13" font-weight="700">▶ ポイント：あなたは「日本国内のBuyee住所宛てに発送する」だけ。言語・通貨・関税の対応は全部Buyeeが処理。</text>
+      </svg>
+    </div>
+
+    <!-- ▼ eIS フロー -->
+    <h4 style="font-size:15px;font-weight:700;color:#1A6D39;margin:32px 0 8px;border-left:3px solid #228B48;padding-left:10px;">図② eIS（eBay International Shipping）の流れ — 国内発送するだけ</h4>
+    <div class="flow-svg-wrap">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="eIS eBay国際配送の流れ">
+        <defs>
+          <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#228B48"/>
+          </marker>
+        </defs>
+
+        <!-- 3ステップ -->
+        <circle cx="100" cy="80" r="32" fill="#228B48"/>
+        <text x="100" y="86" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">1</text>
+        <text x="100" y="135" text-anchor="middle" fill="#0F4A28" font-size="13" font-weight="700">あなたが国内発送</text>
+        <text x="100" y="153" text-anchor="middle" fill="#555" font-size="11">eIS指定の日本国内</text>
+        <text x="100" y="169" text-anchor="middle" fill="#555" font-size="11">倉庫まで送るだけ</text>
+        <text x="100" y="187" text-anchor="middle" fill="#228B48" font-size="11" font-weight="600">英語対応：不要</text>
+
+        <line x1="140" y1="80" x2="358" y2="80" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrB)"/>
+
+        <circle cx="400" cy="80" r="32" fill="#228B48"/>
+        <text x="400" y="86" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">2</text>
+        <text x="400" y="135" text-anchor="middle" fill="#0F4A28" font-size="13" font-weight="700">eBayが裏で全部処理</text>
+        <text x="400" y="153" text-anchor="middle" fill="#555" font-size="11">梱包確認・関税申告</text>
+        <text x="400" y="169" text-anchor="middle" fill="#555" font-size="11">国際配送・追跡管理</text>
+        <text x="400" y="187" text-anchor="middle" fill="#228B48" font-size="11" font-weight="600">追加手数料：1.5%</text>
+
+        <line x1="440" y1="80" x2="658" y2="80" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrB)"/>
+
+        <circle cx="700" cy="80" r="32" fill="#228B48"/>
+        <text x="700" y="86" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">3</text>
+        <text x="700" y="135" text-anchor="middle" fill="#0F4A28" font-size="13" font-weight="700">海外顧客が受取</text>
+        <text x="700" y="153" text-anchor="middle" fill="#555" font-size="11">自国住所に届く</text>
+        <text x="700" y="169" text-anchor="middle" fill="#555" font-size="11">トラブル時もeBay対応</text>
+        <text x="700" y="187" text-anchor="middle" fill="#228B48" font-size="11" font-weight="600">あなたへの問合せ：ほぼ無し</text>
+
+        <!-- 比較ボックス -->
+        <rect x="80" y="220" width="320" height="80" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="240" y="244" text-anchor="middle" fill="#c0392b" font-size="12" font-weight="700">✗ 自分で国際発送する場合</text>
+        <text x="240" y="266" text-anchor="middle" fill="#555" font-size="11">関税申告書類・国際配送業者選定</text>
+        <text x="240" y="282" text-anchor="middle" fill="#555" font-size="11">英語問合せ対応・追跡管理</text>
+
+        <rect x="480" y="220" width="320" height="80" rx="6" fill="#E8F5EC" stroke="#228B48" stroke-width="1.5"/>
+        <text x="640" y="244" text-anchor="middle" fill="#0F4A28" font-size="12" font-weight="700">✓ eIS を使えば</text>
+        <text x="640" y="266" text-anchor="middle" fill="#1A6D39" font-size="11">国内発送＋1.5%手数料で全部OK</text>
+        <text x="640" y="282" text-anchor="middle" fill="#1A6D39" font-size="11">2025年8月の関税変更にも対応済み</text>
+      </svg>
+    </div>
+
+    <!-- ▼ キロ売りフロー -->
+    <h4 style="font-size:15px;font-weight:700;color:#1A6D39;margin:32px 0 8px;border-left:3px solid #228B48;padding-left:10px;">図③ キロ売り（B2B卸）の流れ — 滞留3,200点を現金化</h4>
+    <div class="flow-svg-wrap">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="キロ売りB2B卸の流れ">
+        <defs>
+          <marker id="arrD" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#228B48"/>
+          </marker>
+        </defs>
+
+        <!-- ステップ -->
+        <rect x="20" y="30" width="160" height="80" rx="6" fill="#0F4A28"/>
+        <text x="100" y="58" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">STEP 1</text>
+        <text x="100" y="80" text-anchor="middle" fill="#B8E5C5" font-size="18" font-weight="700">4,000点</text>
+        <text x="100" y="100" text-anchor="middle" fill="#fff" font-size="11">現在の在庫</text>
+        <line x1="185" y1="70" x2="218" y2="70" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrD)"/>
+
+        <rect x="225" y="30" width="160" height="80" rx="6" fill="#228B48"/>
+        <text x="305" y="58" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">STEP 2 / 仕分け</text>
+        <text x="305" y="80" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">800点を残す</text>
+        <text x="305" y="98" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">3,200点を卸す</text>
+        <line x1="390" y1="70" x2="423" y2="70" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrD)"/>
+
+        <rect x="430" y="30" width="160" height="80" rx="6" fill="#34A85A"/>
+        <text x="510" y="58" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">STEP 3 / 見積</text>
+        <text x="510" y="80" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">業者3社に</text>
+        <text x="510" y="96" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">相見積依頼</text>
+        <line x1="595" y1="70" x2="628" y2="70" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrD)"/>
+
+        <rect x="635" y="30" width="160" height="80" rx="6" fill="#1A6D39"/>
+        <text x="715" y="58" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">STEP 4 / 出荷</text>
+        <text x="715" y="80" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">最高条件の</text>
+        <text x="715" y="96" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">業者へまとめ発送</text>
+
+        <!-- 結果 -->
+        <line x1="715" y1="115" x2="715" y2="148" stroke="#228B48" stroke-width="2.5" marker-end="url(#arrD)"/>
+
+        <rect x="490" y="155" width="370" height="100" rx="8" fill="#E8F5EC" stroke="#228B48" stroke-width="2"/>
+        <text x="675" y="184" text-anchor="middle" fill="#0F4A28" font-size="14" font-weight="700">STEP 5 / 入金（2〜4週間）</text>
+        <text x="675" y="210" text-anchor="middle" fill="#1A6D39" font-size="22" font-weight="700">¥300,000〜¥800,000</text>
+        <text x="675" y="232" text-anchor="middle" fill="#555" font-size="11">業界相場 キロ¥300〜¥800・約960kg</text>
+        <text x="675" y="248" text-anchor="middle" fill="#555" font-size="11">この現金を運転資金にして次フェーズへ</text>
+
+        <!-- 仕分けの解説 -->
+        <rect x="20" y="155" width="450" height="100" rx="8" fill="#fff" stroke="#34A85A" stroke-width="1.5"/>
+        <text x="35" y="180" fill="#1A6D39" font-size="12" font-weight="700">▼ 仕分けの考え方</text>
+        <text x="35" y="202" fill="#1a1a1a" font-size="12">・売れ筋上位20%（800点）は自分の販路に残す</text>
+        <text x="35" y="220" fill="#1a1a1a" font-size="12">・残り80%（3,200点）は出品しても売れにくく管理コストの方が高い</text>
+        <text x="35" y="238" fill="#c0392b" font-size="12" font-weight="600">→「捨てる」のではなく「滞留分を一気に現金に変える」</text>
+
+        <!-- 補足 -->
+        <rect x="20" y="280" width="840" height="30" rx="6" fill="#0F4A28"/>
+        <text x="440" y="300" text-anchor="middle" fill="#B8E5C5" font-size="12" font-weight="700">▶ ポイント：自分で梱包・撮影・出品せず、業者がまとめて引き取る。仕分けと業者選びだけが自分の仕事。</text>
+      </svg>
+    </div>
+
     <h3>短期 — 今週着手（〜1ヶ月）</h3>
     <div class="action-grid">
 
@@ -1587,7 +1904,7 @@ table.compare .mid { color: #c4830a; font-weight: 600; }
             <div class="name">eBay日本人セラー登録＋ヴィンテージ100点先行投入</div>
           </div>
         </div>
-        <p class="gist">米国市場は古着・ヴィンテージで世界最大。手数料合計15〜18%でも、同じ古着が日本の2〜3倍の価格で売れる。月商$3,000を超えれば国際手数料も1.20%に下がる。</p>
+        <p class="gist">米国市場は古着・ヴィンテージで世界最大。手数料合計約16〜18%でも、同じ古着が日本の2〜3倍の価格で売れる。月商$3,000を超えれば国際手数料も1.20%に下がる。</p>
         <div class="metrics">
           <div class="key">効果</div><div class="val">★★★（米市場が最大）</div>
           <div class="key">着手</div><div class="val">B（英語＋登録）</div>
